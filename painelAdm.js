@@ -1,13 +1,19 @@
+// document.body.onload = async() => {
 
 async function main() {
     const findEvents = await fetch('https://soundgarden-api.vercel.app/events')  // passa a conectionString da API e conecta a ela
 
     const list = await findEvents.json() //transforma o array (json) que vem da API em um objeto JSON
 
-    const root = document.querySelector('#containerEventos')    //seleciona a TAG já criaada no objeto HTML onde irão cair os dados da API
+    const root = document.querySelector('#listTable')    //seleciona a TAG já criaada no objeto HTML onde irão cair os dados da API
+
 
     //lista e cria os elementos 
     list.forEach(event => {
+        const table = document.createElement('table')
+        table.classList.add('table')
+
+
         //criando o article
         const article = document.createElement('article')
         //definindo as classes dos articles
@@ -33,15 +39,13 @@ async function main() {
         const button = document.createElement('button')
         button.classList.add('btn', 'btn-primary')
         button.innerText = 'reservar ingresso'
-        button.addEventListener('click', () => {
-            alert(event.name) // deverá inserir a função
-        })
         // criar link para a reserva
         article.appendChild(button)          
 
         //inser o article dentro do objeto root, que foi o que a gente selecionou acima
         root.appendChild(article)
     })
+
    
 }
 
