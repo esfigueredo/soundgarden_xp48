@@ -12,59 +12,43 @@
     <link rel="stylesheet" href="/src/banner/style.css">
 </head>
 
-<body onload="comeco();regular()";>
+<body onload="comeco();regular()" ;>
     <header class=" d-flex justify-content-center align-items-center">
         <img src="img/Sound-logo (1).png" width="300" alt="">
     </header>
     <main>
+
+        <!-- modal -->
+        <div id="modal" style="display: none;">
+            <div id="modal-header">
+                <h2 id="h2">Registre-se!</h2>
+            </div>
+            <form id="form1">
+                <label id="name" for="nome">nome:</label>
+                <input type="text" name="nome">
+
+                <label id="email" for="email">e-mail:</label>
+                <input type="email" id="email" name="email">
+
+                <button id="mb" type="submit">reservar</button>
+            </form>
+            <div id="modal-footer">
+            </div>
+        </div><!--modal-->
+
         <section class="full d-flex justify-content-center align-items-center"
-            style="background-color: #F8BBD0; color: #fff">
-
-        <div class="text-center">
-            <!-- <a id="aId"></a> -->
-            
-        <img id="imgId">
-            <!-- </a> -->
-            <br>
-        <a class="btn btn-primary prev" href="javascript:menos()">Anterior</a>
-        <a class="btn btn-primary next" href="javascript:mais()">Próximo</a>
-
-        <form name="form">
-        <input type=text name="texto">
-        </form>
-
-        </div>
+            style="background-color: #C2185B; color: #fff">
+            <div class="banner">
+                <img src="./img/bannerevento.jpg" alt="banner festival">
+            </div>
 
         </section>
+
         <section class="full">
             <div class="container text-center">
                 <h2>Próximos eventos</h2>
             </div>
-            <div class="container d-flex justify-content-center align-items-center">
-                <article class="evento card p-5 m-3">
-                    <h2>nome do evento - 05/03/2022</h2>
-                    <h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
-                        dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
-                        nobis in inventore tenetur asperiores.</p>
-                    <a href="#" class="btn btn-primary">reservar ingresso</a>
-                </article>
-                <article class="evento card p-5 m-3">
-                    <h2>nome do evento - 05/03/2022</h2>
-                    <h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
-                        dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
-                        nobis in inventore tenetur asperiores.</p>
-                    <a href="#" class="btn btn-primary">reservar ingresso</a>
-                </article>
-                <article class="evento card p-5 m-3">
-                    <h2>nome do evento - 05/03/2022</h2>
-                    <h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro aperiam sunt quo similique,
-                        dolorum consectetur inventore ipsam, officiis neque natus eius harum alias quidem. Possimus
-                        nobis in inventore tenetur asperiores.</p>
-                    <a href="#" class="btn btn-primary">reservar ingresso</a>
-                </article>
+            <div id="container-eventos-1" class="container d-flex justify-content-center align-items-center">
             </div>
             <div class="container text-center">
                 <a href="eventos.html" class="btn btn-secondary">ver todos os eventos</a>
@@ -77,11 +61,28 @@
                     <div class="col">
                         <h2>A Sound Garden</h2>
 
-                        <p>Sound Garden é uma casa de shows fictícia localizada no coração da cidade. É conhecida por ser um espaço descolado e moderno, onde o público pode desfrutar de apresentações musicais ao vivo de diversos gêneros. A casa foi construída com o objetivo de oferecer aos visitantes uma experiência única e inesquecível, e isso é alcançado através da combinação de uma excelente acústica, iluminação e tecnologia de última geração.</p>
-                        <p>O palco principal é um dos destaques da casa, com um design arrojado e tecnologia avançada, que garante um som de alta qualidade durante as apresentações. Além disso, o público pode desfrutar de uma ampla variedade de bebidas e comidas, incluindo drinks artesanais e opções vegetarianas, em um bar e restaurante localizado no local.</p>
-                        <p>O Sound Garden também é conhecido por sua programação diversificada, com apresentações de música ao vivo todas as noites da semana. Alguns dos artistas mais talentosos e consagrados do cenário musical nacional e internacional já se apresentaram na casa, tornando-a um ponto de referência para os amantes da música.</p>
-                        <p>Além disso, a casa oferece serviços de áudio e iluminação de alta qualidade para eventos corporativos e privados, como casamentos, lançamentos de produtos e festas de aniversário. O Sound Garden também possui uma equipe altamente qualificada e comprometida, que trabalha incansavelmente para garantir a satisfação dos clientes e a realização de eventos inesquecíveis.</p>
-                        <p>Em resumo, o Sound Garden é uma casa de shows moderna e descolada, que oferece aos visitantes uma experiência única e inesquecível. Com sua programação diversificada, excelente acústica e tecnologia de ponta, é o lugar perfeito para os amantes da música e dos eventos ao vivo.</p>
+                        <p>Sound Garden é uma casa de shows fictícia localizada no coração da cidade. É conhecida por
+                            ser um espaço descolado e moderno, onde o público pode desfrutar de apresentações musicais
+                            ao vivo de diversos gêneros. A casa foi construída com o objetivo de oferecer aos visitantes
+                            uma experiência única e inesquecível, e isso é alcançado através da combinação de uma
+                            excelente acústica, iluminação e tecnologia de última geração.</p>
+                        <p>O palco principal é um dos destaques da casa, com um design arrojado e tecnologia avançada,
+                            que garante um som de alta qualidade durante as apresentações. Além disso, o público pode
+                            desfrutar de uma ampla variedade de bebidas e comidas, incluindo drinks artesanais e opções
+                            vegetarianas, em um bar e restaurante localizado no local.</p>
+                        <p>O Sound Garden também é conhecido por sua programação diversificada, com apresentações de
+                            música ao vivo todas as noites da semana. Alguns dos artistas mais talentosos e consagrados
+                            do cenário musical nacional e internacional já se apresentaram na casa, tornando-a um ponto
+                            de referência para os amantes da música.</p>
+                        <p>Além disso, a casa oferece serviços de áudio e iluminação de alta qualidade para eventos
+                            corporativos e privados, como casamentos, lançamentos de produtos e festas de aniversário. O
+                            Sound Garden também possui uma equipe altamente qualificada e comprometida, que trabalha
+                            incansavelmente para garantir a satisfação dos clientes e a realização de eventos
+                            inesquecíveis.</p>
+                        <p>Em resumo, o Sound Garden é uma casa de shows moderna e descolada, que oferece aos visitantes
+                            uma experiência única e inesquecível. Com sua programação diversificada, excelente acústica
+                            e tecnologia de ponta, é o lugar perfeito para os amantes da música e dos eventos ao vivo.
+                        </p>
 
                     </div>
                     <div class="col">
@@ -92,6 +93,7 @@
         </section>
 
     </main>
+
     <footer>
         <div class="container d-flex justify-content-center align-items-center">
             <a href="#">
@@ -108,9 +110,36 @@
                 </ul>
             </nav>
         </div>
+
     </footer>
 
-    <script src="/src/banner/banner.js" type="text/javascript"></script>
+    <script src="/src/banner/banner.js"></script>
+    <script src="/src/modal/index.js"></script>
+    <script src="/src/modal/modal.js"></script>
+    <script>
+        // Selecione o botão de reserva
+        const reserveButton = document.querySelector("#mb");
+
+        // Adicione um ouvinte de evento de clique ao botão de reserva
+        reserveButton.addEventListener("click", function (event) {
+            // Impedir o envio do formulário
+            event.preventDefault();
+
+            // Selecionar os campos de entrada de nome e e-mail
+            const nameInput = document.querySelector("#name");
+            const emailInput = document.querySelector("#email");
+
+            // Obter o ID do evento a partir do URL atual
+            const url = new URL(window.location.href);
+            const eventId = url.searchParams.get("id");
+
+            // Exibir informações do usuário em um modal
+            alert(`Sua reserva foi feita!\n\nNome: ${nameInput.value}\nE-mail: ${emailInput.value}\nID do evento: ${eventId}`);
+        });
+    </script>
+
+    <script src="./src/eventosHome.js"></script>
+
 </body>
 
 </html>

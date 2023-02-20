@@ -1,0 +1,29 @@
+.text-center {
+    font-display: flex;
+    justify-content: space-around;
+}
+
+.text-center img {
+    width: 83%;
+    height: 690px;
+}
+
+form {
+    display: none;
+}
+
+.next {
+    text-decoration: none;
+    /* padding: 10px 80px; */
+    margin: 0px 384px;
+    margin-top: 2%;
+}
+
+.prev {
+    text-decoration: none;
+    /* padding: 10px 80px; */
+    margin: 0px 384px;
+    margin-top: 2%;
+}
+
+

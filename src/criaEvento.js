@@ -25,11 +25,11 @@ enviarPost.addEventListener('click', async (e) => {
     try{
         const inputDadosPost = {
             name: document.querySelector('#nome').value,
-            poster : 'vaiquevai.eissoai',
-            atracoes: trataAtracoes(document.querySelector('#atracoes').value),
-            descricao: document.querySelector('#descricao').value,
-            data: formataData(document.querySelector('#data').value),
-            lotacao: document.querySelector('#lotacao').value
+            poster : document.querySelector('#poster').value,
+            attractions: trataAtracoes(document.querySelector('#atracoes').value),
+            description: document.querySelector('#descricao').value,
+            scheduled: formataData(document.querySelector('#data').value),
+            number_tickets: document.querySelector('#lotacao').value
         }
 
         let resposta = await fetch('https://soundgarden-api.vercel.app/events', {
@@ -37,12 +37,14 @@ enviarPost.addEventListener('click', async (e) => {
             body: JSON.stringify(inputDadosPost),
             headers: {'Content-Type' : 'application/json'}
         })
-
+        alert("Evento criado com sucesso!")
         console.log(resposta.ok)
+        window.location.href = 'admin.html'
 
     }
     catch (erro) {
         console.log(erro)
+        alert("Não foi possível criar o evento")
     }    
 })
 
