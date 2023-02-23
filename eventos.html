@@ -8,6 +8,7 @@
     <title>Sound Garden - Eventos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -22,7 +23,7 @@
             <div class="container text-center">
                 <h2>Todos os Eventos</h2>
             </div>
-            <div id="containerEventos" class="container d-flex justify-content-center align-items-center flex-wrap">              
+            <div id="containerEventos" class="container d-flex justify-content-center align-items-center flex-wrap">
             </div>
         </section>
         <section class="full d-flex justify-content-center align-items-center"
@@ -73,7 +74,37 @@
             </nav>
         </div>
     </footer>
-    <!-- <script src="/src/modal/index.js"></script> -->
+
+
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+        <div class="moda-header">
+            <h2 id="atracao">Evento</h2>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Nome:</label>
+                    <input type="text" class="form-control" id="text-name">
+                </div>
+                <div class="form-group">
+                    <label for="message-text" class="col-form-label">E-mail:</label>
+                    <input type="text" class="form-control" id="text-email">
+                </div>
+                <div class="form-group">
+                    <label for="message-text" class="col-form-label">Numero de reservas:</label>
+                    <input type="number" class="form-control" id="numeroTickets" min="1" max="1000">
+                </div>                
+            </form>
+        </div>
+        <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button> -->
+            <button type="button" id="btnEnviarReserva" class="btn btn-primary">Enviar</button>
+        </div>
+    </div>
+
+
+
     <script src="src/listaEventos.js"></script>
 </body>
 

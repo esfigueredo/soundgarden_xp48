@@ -44,7 +44,7 @@ async function getEvents(){ // função assíncrona pra pegar os eventos
         tdAttractions.innerText = event.attractions;
         
         // definir ação, estilo e texto de cada botão:
-        buttonVerReservas.setAttribute("href", `modal-ver-reserva/modal-ver-res.html?id=${event._id}`); // montar o link com o id de cada botão na url pra ter páginas individuais
+        buttonVerReservas.setAttribute("href", `modal-ver-res.html?id=${event._id}`); // montar o link com o id de cada botão na url pra ter páginas individuais
         buttonVerReservas.classList.add("btn", "btn-dark");
         buttonVerReservas.innerText = "ver reservas";
 

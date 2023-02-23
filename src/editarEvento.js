@@ -2,19 +2,10 @@ const idEvento = new URLSearchParams(window.location.search)
 
 const url = 'https://soundgarden-api.vercel.app/events/' + idEvento.get('id') // resgatar os eventos dessa url
 
-function formataData(value) {
-    let dataHora = value.split(' ')
-    let [dia, mes, ano] = dataHora[0].split('/')
-    let [hora, minuto]  = dataHora[1].split(':')
-
-    let dataFormatada = new Date(ano, mes, dia, hora, minuto)
-    return dataFormatada.toJSON()
-}
 
 function trataAtracoes(value) {
     return value.split(',')
 }
-
 
 async function preencheCampos() {
 
@@ -41,8 +32,8 @@ document.getElementById('btn-editarEvento').addEventListener('click', async (e) 
             poster : document.getElementById('banner').value,
             attractions:  trataAtracoes(document.getElementById('atracoes').value),
             description: document.getElementById('descricao').value,
-            scheduled: formataData(document.getElementById('data').value),
-            number_tickets: getElementById('lotacao').value
+            scheduled: document.getElementById('data').value,
+            number_tickets: document.getElementById('lotacao').value
         }
 
         let resposta = await fetch(url, {
@@ -57,7 +48,7 @@ document.getElementById('btn-editarEvento').addEventListener('click', async (e) 
         }
 
     } catch (erro) {
-        alert('Não foi possível alterar o evento')
+        alert('Não foi possível alterar o evento - ' + erro)
     }
 })
 
